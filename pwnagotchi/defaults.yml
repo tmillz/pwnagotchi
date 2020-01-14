@@ -6,7 +6,7 @@
 # main algorithm configuration
 main:
     # if set this will set the hostname of the unit. min length is 2, max length 25, only a-zA-Z0-9- allowed
-    name: ''
+    name: 'pwnagotchi'
     # currently implemented: en (default), de, el, fr, it, mk, nl, ru, se, pt-BR, es, pt
     lang: en
     # custom plugins path, if null only default plugins with be loaded
@@ -19,8 +19,8 @@ main:
             exclude: # do not report the following networks (accepts both ESSIDs and BSSIDs)
                 - YourHomeNetworkHere
         auto-update:
-            enabled: true
-            install: true # if false, it will only warn that updates are available, if true it will install them
+            enabled: false
+            install: false # if false, it will only warn that updates are available, if true it will install them
             interval: 1 # every 1 hour
         net-pos:
             enabled: false
@@ -82,7 +82,7 @@ main:
               #20: 'touch /root/.pwnagotchi-auto && servicectl restart pwnagotchi'
               #21: 'shutdown -h now'
         led:
-            enabled: true
+            enabled: false
             # for /sys/class/leds/led0/brightness
             led: 0
             # time in milliseconds for each element of the patterns
@@ -113,7 +113,7 @@ main:
                 peer_detected: 'oo  oo  oo oo  oo  oo  oo'
                 peer_lost: 'oo  oo  oo oo  oo  oo  oo'
         webcfg:
-          enabled: false
+          enabled: true
         session-stats:
           enabled: true
     # monitor interface to use
@@ -246,7 +246,7 @@ ui:
     # web ui
     web:
       enabled: true
-      address: '0.0.0.0'
+      address: '127.0.0.1'
       username: changeme # !!! CHANGE THIS !!!
       password: changeme # !!! CHANGE THIS !!!
       origin: null
@@ -257,7 +257,7 @@ ui:
       on_frame: ''
     # hardware display
     display:
-        enabled: true
+        enabled: false
         rotation: 180
         # Possible options inkyphat/inky, papirus/papi, waveshare_1/ws_1 or waveshare_2/ws_2, oledhat, lcdhat, waveshare154inch, waveshare27inch, waveshare29inch, dfrobot/df, waveshare144lcd/ws144inch
         type: 'waveshare_2'
