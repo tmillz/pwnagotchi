@@ -34,13 +34,13 @@ def install_system_files():
             install_file(source_filename, dest_filename)
 
     # reload systemd units
-    os.system("systemctl daemon-reload")
+    os.system("servicectl daemon-reload")
 
 
 def installer():
     install_system_files()
     # for people updating https://github.com/evilsocket/pwnagotchi/pull/551/files
-    os.system("systemctl enable fstrim.timer")
+    os.system("servicectl enable fstrim.timer")
 
 
 installer()
