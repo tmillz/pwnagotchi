@@ -117,7 +117,7 @@ main:
         session-stats:
           enabled: true
     # monitor interface to use
-    iface: mon0
+    iface: wlan0
     # command to run to bring the mon interface up in case it's not up already
     mon_start_cmd: /usr/bin/monstart
     mon_stop_cmd: /usr/bin/monstop
