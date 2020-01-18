@@ -14,12 +14,12 @@ blink_led() {
 
 # starts mon0
 start_monitor_interface() {
-  #iw phy phy0 interface add mon0 type monitor && ifconfig mon0 up
+  iw phy phy0 interface add mon0 type monitor && ifconfig mon0 up
 }
 
 # stops mon0
 stop_monitor_interface() {
-  #ifconfig mon0 down && iw dev mon0 del
+  ifconfig mon0 down && iw dev mon0 del
 }
 
 # returns 0 if the specificed network interface is up

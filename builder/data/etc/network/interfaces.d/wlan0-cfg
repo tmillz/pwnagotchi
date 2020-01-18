@@ -1,2 +1,2 @@
-allow-hotplug wlan0
-iface wlan0 inet static
+allow-hotplug wlan1
+iface wlan1 inet static

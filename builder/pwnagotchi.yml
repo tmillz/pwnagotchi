@@ -32,7 +32,7 @@
         - wpa_supplicant.service
         - bluetooth.service
         - triggerhappy.service
-        - ifup@wlan0.service
+        - ifup@wlan1.service
     packages:
       bettercap:
         url: "https://github.com/bettercap/bettercap/releases/download/v2.26.1/bettercap_linux_armhf_v2.26.1.zip"
