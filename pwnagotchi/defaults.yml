@@ -6,7 +6,7 @@
 # main algorithm configuration
 main:
     # if set this will set the hostname of the unit. min length is 2, max length 25, only a-zA-Z0-9- allowed
-    name: 'pwnagotchi'
+    name: ''
     # currently implemented: en (default), de, el, fr, it, mk, nl, ru, se, pt-BR, es, pt
     lang: en
     # custom plugins path, if null only default plugins with be loaded
@@ -117,7 +117,7 @@ main:
         session-stats:
           enabled: true
     # monitor interface to use
-    iface: wlan1
+    iface: mon0
     # command to run to bring the mon interface up in case it's not up already
     mon_start_cmd: /usr/bin/monstart
     mon_stop_cmd: /usr/bin/monstop
@@ -242,11 +242,11 @@ ui:
     # IMPORTANT: The lifespan of an eINK display depends on the cumulative amount of refreshes. If you want to
     # preserve your display over time, you should set this value to 0.0 so that the display will be refreshed only
     # if any of the important data fields changed (the uptime and blinking cursor won't trigger a refresh).
-    fps: 0.0
+    fps: 1.0
     # web ui
     web:
       enabled: true
-      address: '127.0.0.1'
+      address: '0.0.0.0'
       username: changeme # !!! CHANGE THIS !!!
       password: changeme # !!! CHANGE THIS !!!
       origin: null
